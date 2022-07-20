@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed:dev": "npx sequelize-cli db:seed --seed ./seeders/dev"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +17,8 @@
     "pg": "^8.7.3",
     "postgres": "^3.2.4",
     "sequelize": "^6.21.3"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.3.0"
   }
 }
