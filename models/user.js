@@ -2,7 +2,7 @@ const {
   DataTypes
 } = require('sequelize');
 
-module.exports = sequelize => {
+module.exports = (sequelize, DataTypes) => {
   const attributes = {
     id: {
       type: DataTypes.INTEGER,
@@ -64,6 +64,6 @@ module.exports = sequelize => {
     comment: "",
     indexes: []
   };
-  const UsersModel = sequelize.define("users_model", attributes, options);
+  const UsersModel = sequelize.define("User", attributes, options);
   return UsersModel;
 };
